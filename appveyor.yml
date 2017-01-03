@@ -20,7 +20,8 @@ deploy:
     secure: WcDqU36pLPvA+s5D4N0VEsi7AZGewvf4croE/D3rh3F+iqiztq9w5gHbrhgoTNS9
   on:
     branch: master
-after_test:
+test: off
+#after_test:
 #  - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\NUnit.ConsoleRunner.3.5.0\tools\nunit3-console.exe" -targetargs:".\LibP2P.Abstractions.Transport.Tests\bin\Release\LibP2P.Abstractions.Transport.Tests.dll" -filter:"+[LibP2P.Abstractions.Transport]* -[LibP2P.Abstractions.Transport.Benchmarks]* -[LibP2P.Abstractions.Transport.Tests]*" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\coverage.xml
 #  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
 #  - pip install codecov
